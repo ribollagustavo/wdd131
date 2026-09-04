@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #111;
+  background-color: white;
+}
+
+header {
+  background-color: #00008b;
+  color: #eaeaee;
+  padding: 18px 22px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav {
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 12px 14px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: white;
+  min-height: 340px;
+}
+
+main .content {
+  padding: 18px 22px;
+  border-right: 2px solid #bdbdbd;
+  background-color: #cfcfcf;
+  color: #111;
+}
+
+main aside {
+  padding: 18px 22px;
+  background-color: gray;
+  color: #111;
+  text-align: center;
+}
+
+footer {
+  background-color: darkblue; 
+  color: #eaeaea;
+  text-align: center;
+  padding: 18px 22px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  main .content {
+    border-right: none;
+    border-bottom: 2px solid #bdbdbd;
+  }
+}
