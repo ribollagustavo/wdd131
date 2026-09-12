@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Gustavo Ribolla</title>
+
+    <meta name="description" content="Gustavo Ribolla's personal homepage for WDD 131 – Dynamic Web Fundamentals, featuring an introduction and web development resources.">
+    <meta name="author" content="Gustavo Ribolla">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>Welcome to WDD 131, Gustavo!</h1>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav class="navbar">
+            <a href="https://www.linkedin.com/in/gustavo-ribolla-304529262/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/.">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p41#p41">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="name-title">Gustavo Ribolla</h1>
+
+        <div class="cards-container">
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>My name is Gustavo. I am from São Paulo, Brazil. I am currently a student at BYU-Idaho, studying Software Development. I like to play video games, hang out with friends, and explore new technologies.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="./images/profile.jpeg" alt="Gustavo Ribolla">
+                    </div>
+                </div>
+
+                <h3>São Paulo, Brazil</h3>
+                <span class="underline"></span>
+                <div class="country-content">
+                    <div class="country-flag">
+                        <img src="./images/brazil_flag.webp" alt="Official Flag of Brazil">
+                        <p>Official Flag of Brazil</p>
+                    </div>
+                    <div class="country-text">
+                        <p>Brazil is the largest country in South America and the 5th largest in the world, known for its vibrant culture, warm hospitality, and remarkable natural diversity—from the vast Amazon rainforest to sunlit Atlantic beaches. Home to dynamic cities like São Paulo and Rio de Janeiro, it blends modern energy with deep traditions in music, food, and festivals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card web-resources">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://dev.to/">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="#">Final Project</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Gustavo Ribolla | São Paulo, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

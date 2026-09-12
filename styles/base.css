@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #1f5fa8;   
+    --secondary-color: #414040; 
+    --wireframe-navy: #3b3b58;  
+    --wireframe-cream: #f5f5dc;  
+    --wireframe-salmon: #e68a6e;
+    --text-color: #ffffff;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.header-content span {
+    color: #ffffff;
+}
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--wireframe-salmon);
+    text-decoration: underline;
+}
+
+
+.course-card.completed {
+    background-color: var(--wireframe-cream);
+    color: #222;
+}
+
+.course-card.incomplete {
+    background-color: var(--wireframe-salmon);
+    color: #000;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+#lastModified {
+    color: #ffd700;
+    font-weight: bold;
+    display: block;
+}
+
+footer a img {
+    width: 30px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1); 
+}
