@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preload critical images for small screens
+    const preloadImages = [
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    ];
+
+    preloadImages.forEach(url => {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = url;
+        document.head.appendChild(link);
+    });
 
     // Hamburger menu toggle
     const menuToggle = document.getElementById('menu-toggle');
