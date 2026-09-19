@@ -1,7 +1,7 @@
 @media screen and (min-width: 500px) {
   header {
     background-color: black;
-    text-decoration-color: white;
+    color: white;
   }
 
   main {
