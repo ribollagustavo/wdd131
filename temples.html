@@ -6,59 +6,63 @@
     <title>Picture Album | Gustavo Ribolla</title>
     <meta name="description" content="Picture Album">
     <meta name="author" content="Gustavo Ribolla">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Temples Album</h1>
-        <nav>
+        <p class="site-title">Temples Album</p>
+        <button id="menu" type="button" aria-label="Toggle navigation menu"></button>
+        <nav class="navigation">
             <ul>
-                <li><a>Home</a></li>
-                <li><a>Old</a></li>
-                <li><a>New</a></li>
-                <li><a>Large</a></li>
-                <li><a>Small</a></li>
-
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
+        </nav>
     </header>
     <main>
-        <h1>Home</h1>
-        <figure>
-            <img src="images/temples/brasilia_temple.webp" alt="The Brasilia Temple">
+        <h1 id="gallery-heading">Home</h1>
+        <figure class="temple-card">
+            <img src="images/temples/brasilia_temple.webp" alt="The Brasilia Temple" width="300" height="200">
             <figcaption>The Brasilia Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/curitiba_temple.webp" alt="The Curitiba Temple">
+        <figure class="temple-card">
+            <img src="images/temples/curitiba_temple.webp" alt="The Curitiba Temple" width="300" height="200">
             <figcaption>The Curitiba Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/gj_colorado_temple.webp" alt="The Grand Junction Colorado Temple">
+        <figure class="temple-card">
+            <img src="images/temples/gj_colorado_temple.webp" alt="The Grand Junction Colorado Temple" width="300" height="200">
             <figcaption>The Grand Junction Colorado Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/manti_temple.webp" alt="The Manti Utah Temple">
+        <figure class="temple-card">
+            <img src="images/temples/manti_temple.webp" alt="The Manti Utah Temple" width="300" height="200">
             <figcaption>The Manti Utah Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/mesa_ar_temple.webp" alt="The Mesa Arizona Temple">
+        <figure class="temple-card">
+            <img src="images/temples/mesa_ar_temple.webp" alt="The Mesa Arizona Temple" width="300" height="200">
             <figcaption>The Mesa Arizona Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/payson_temple.webp" alt="The Payson Utah Temple">
+        <figure class="temple-card">
+            <img src="images/temples/payson_temple.webp" alt="The Payson Utah Temple" width="300" height="200">
             <figcaption>The Payson Utah Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/rome_temple.webp" alt="The Rome Italy Temple">
+        <figure class="temple-card">
+            <img src="images/temples/rome_temple.webp" alt="The Rome Italy Temple" width="300" height="200">
             <figcaption>The Rome Italy Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/salt_lake_temple.webp" alt="The Salt Lake City Utah Temple">
+        <figure class="temple-card">
+            <img src="images/temples/salt_lake_temple.webp" alt="The Salt Lake City Utah Temple" width="300" height="200">
             <figcaption>The Salt Lake City Utah Temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temples/sp_temple.webp" alt="The Sao Paulo Brazil Temple">
+        <figure class="temple-card">
+            <img src="images/temples/sp_temple.webp" alt="The Sao Paulo Brazil Temple" width="300" height="200">
             <figcaption>The Sao Paulo Brazil Temple</figcaption>
         </figure>
     </main>
