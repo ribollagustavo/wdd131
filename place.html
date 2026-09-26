@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Country Page</title>
+    <meta name="description" content="A page dedicated to my country, providing information about its culture, history, and attractions.">
+    <meta name="author" content="Gustavo Ribolla">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 640px)">
+
+    <script defer src="scripts/place.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+
+<body>
+    <header>
+        <h1>São Paulo</h1>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <picture>
+                <source 
+                    srcset="images/hero-small.webp 600w, images/hero-large.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 720px"
+                    type="image/webp">
+                <img 
+                    src="images/hero-large.webp" 
+                    srcset="images/hero-small.webp 600w, images/hero-large.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 720px"
+                    width="721"
+                    height="480"
+                    alt="São Paulo Wildlife"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async">
+            </picture>
+
+            <section id="data">
+                <h2>Data</h2>
+                <table>
+                    <tr><td class="label">Area:</td><td class="value">8.516 million km²</td></tr>
+                    <tr><td class="label">Population:</td><td class="value">213,562,666</td></tr>
+                    <tr><td class="label">Capital:</td><td class="value">Brasília</td></tr>
+                    <tr><td class="label">Language:</td><td class="value">Portuguese</td></tr>
+                    <tr><td class="label">Currency:</td><td class="value">Brazilian Real (BRL)</td></tr>
+                    <tr><td class="label">Timezone:</td><td class="value">UTC-3</td></tr>
+                    <tr><td class="label">Calling Code:</td><td class="value">+55</td></tr>
+                    <tr><td class="label">Internet TLD:</td><td class="value">.br</td></tr>
+                </table>
+            </section>
+
+            <section id="weather">
+                <h2>Weather</h2>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="weather-icon" viewBox="0 0 16 16" role="img" aria-label="Weather icon">
+                    <path d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316m9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316m-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316m9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316m-7.105-1.25A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724zm6.352-7.249a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973"/>
+                </svg>
+
+                <table>
+                    <tr><td class="label">Temperature:</td><td class="value" id="temp">Value</td></tr>
+                    <tr><td class="label">Conditions:</td><td class="value" id="conditions">Partly Cloudy</td></tr>
+                    <tr><td class="label">Wind Speed:</td><td class="value" id="wind">Value</td></tr>
+                    <tr><td class="label">Wind Chill:</td><td class="value" id="windchill">Value</td></tr>
+                </table>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Gustavo Ribolla | São Paulo, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

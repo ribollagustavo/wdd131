@@ -1,0 +1,26 @@
+@media (min-width: 640px) {
+
+    #data, #weather {
+        position: absolute;
+        max-width: 260px;
+        margin: 0;
+    }
+
+    #data {
+        top: 20px;
+        left: 20px;
+    }
+
+    #weather {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #weather h2::after {
+        content: " ⛅";
+    }
+
+    #weather .weather-icon {
+        display: none;
+    }
+}
