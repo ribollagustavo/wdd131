@@ -5,10 +5,20 @@
     }
     nav ul {
         display: flex;
-        gap: 20px;
+        gap: 1.5rem;
     }
-    main {
-        grid-template-columns: 1fr 1fr 1fr;
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
+    .res-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        background-color: white;
+        padding: 1rem;
     }
     #menu {
         display: none;

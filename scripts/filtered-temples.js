@@ -212,6 +212,7 @@ homeLink.addEventListener("click", (e) => {
     createTempleCards(temples);
 });
 
+
 // Footer
 let d = new Date();
 document.querySelector("#currentyear").innerHTML = `&copy;${d.getFullYear()}`;
