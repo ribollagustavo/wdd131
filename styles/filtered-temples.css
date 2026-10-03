@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f3660;
+    --text-color: #ffffff;
+    --font-text: "Montserrat", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.site-title {
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--text-color);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+    padding: 1rem;
+}
+
+#menu.open::before {
+    content: "X";
+    padding: 1rem;    
+}
+
+.navigation a {
+    display: none;
+}
+
+.open a {
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    font-weight: bold;
+    font-family: var(--font-text);
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 2rem;
+}
+
+nav a:hover {
+    color: rgb(22, 182, 22);
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;  
+    text-align: center;
+    font-family: var(--font-text);
+    font-weight: bold;
+    color: black;
+    padding: 2rem 0;
+}
+
+.temple-card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.temple-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.temple-card:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
