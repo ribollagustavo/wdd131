@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A product review form for customers to submit their feedback.">
+    <meta name="author" content="Gustavo Ribolla">
+    <title>WDD 131 | Product Review Form</title>
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script defer src="scripts/form.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+        media="print" 
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+</head>
+<body>
+
+<header>
+    <h1>Product Review Form</h1>
+</header>
+
+<main>
+    <form method="get" action="review.html" class="wf1">
+        <fieldset>
+
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <div>Overall Rating</div>
+            <div class="rating-group">
+                <label for="rating1"><span>&#9734;</span><input type="radio" id="rating1" name="rating" value="1" required></label>
+                <label for="rating2"><span>&#9734;&#9734;</span><input type="radio" id="rating2" name="rating" value="2" required></label>
+                <label for="rating3"><span>&#9734;&#9734;&#9734;</span><input type="radio" id="rating3" name="rating" value="3" required></label>
+                <label for="rating4"><span>&#9734;&#9734;&#9734;&#9734;</span><input type="radio" id="rating4" name="rating" value="4" required></label>
+                <label for="rating5"><span>&#9734;&#9734;&#9734;&#9734;&#9734;</span><input type="radio" id="rating5" name="rating" value="5" required></label>
+            </div>
+
+            <label for="date">Date of Installation</label>
+            <input type="date" id="date" name="date" required>
+
+            <div>Which features did you find useful in the product?</div>
+            <p>(Check all that apply)</p>
+            <div class="checkbox-group">
+                <label for="durability"><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+                <label for="easeOfUse"><input type="checkbox" id="easeOfUse" name="features" value="Ease of Use"> Ease of Use</label>
+                <label for="performance"><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+                <label for="design"><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+            </div>
+
+            <label for="review">Written Review<span class="optional"> (Optional)</span></label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Your Name<span class="optional"> (Optional)</span></label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Submit My Review">
+        </fieldset>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> Gustavo Ribolla | São Paulo, Brazil </p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
