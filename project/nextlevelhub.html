@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personal video game website to help you level up your gaming experience and life goals.">
+    <meta name="author" content="Gustavo Ribolla">
+    <title>WDD 131 | NextLevel Hub</title>
+
+    <link rel="stylesheet" href="styles/backlog.css">
+    <link rel="stylesheet" href="styles/backlog-large.css">
+
+    <link rel="preload" href="data/achievements.json" as="fetch" type="application/json" crossorigin="anonymous">
+    <script defer src="scripts/backlog.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <a href="home.html" class="nav-logo" aria-label="NextLevel Hub Home">
+            <img 
+                src="images/projecticon-70.webp"
+                srcset="images/projecticon-70.webp 70w,
+                images/projecticon-150.webp 150w"
+                sizes="70px"
+                alt="NextLevel Hub Logo"
+                width="70"
+                height="70"
+                loading="lazy"
+                decoding="async">
+        </a>
+        <h1>NextLevel Tracker</h1>
+        <nav aria-label="Main menu">
+            <button id="menu" aria-label="Menu"></button>
+        </nav>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="nextlevelhub.html">Tracker</a>
+        <a href="references.html">References</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Track Your Progress</h2>
+        <p>Log your games, track your hours, and manage your backlog.</p>
+    </section>
+
+    <!-- Add Game Form -->
+    <section class="card" id="addGameSection">
+        <h3>Add a Game</h3>
+        <form id="addGameForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="gameTitle">Game Title</label>
+                    <select id="gameTitle" required>
+                        <option value="" disabled selected>Choose a game...</option>
+                        <option value="Hollow Knight">Hollow Knight</option>
+                        <option value="Halo 4">Halo 4</option>
+                        <option value="Stardew Valley">Stardew Valley</option>
+                        <option value="Castle Crashers">Castle Crashers</option>
+                        <option value="Hades">Hades</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gameGenre">Genre</label>
+                    <select id="gameGenre" required>
+                        <option value="" disabled selected>Select genre...</option>
+                        <option value="Action">Action</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Simulation">Simulation</option>
+                        <option value="Platformer">Platformer</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Strategy">Strategy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gamePlatform">Platform</label>
+                    <select id="gamePlatform" required>
+                        <option value="" disabled selected>Select platform...</option>
+                        <option value="PC">PC</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                        <option value="Mobile">Mobile</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gameStatus">Status</label>
+                    <select id="gameStatus" required>
+                        <option value="" disabled selected>Select status...</option>
+                        <option value="Planned">Planned</option>
+                        <option value="Playing">Playing</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hoursPlayed">Hours Played</label>
+                    <input type="number" id="hoursPlayed" placeholder="e.g. 42" min="0">
+                </div>
+            </div>
+            <button id="addGameBtn" type="button" class="cta-button">Add to Backlog</button>
+        </form>
+    </section>
+
+    <!-- Achievement Tracker -->
+    <section class="card" id="achievementSection" style="margin-top: 2rem; display: none;">
+        <h3>Log Achievements — <span id="achievementGameName"></span></h3>
+        <p id="achievementHint" class="hint">Type an achievement name to log it.</p>
+        <div class="form-group">
+            <label for="achievementInput">Achievement Name</label>
+            <div class="autocomplete-wrapper">
+                <input type="text" id="achievementInput" placeholder="Type achievement name...">
+                <ul class="autocomplete-list" id="autocompleteList"></ul>
+            </div>
+        </div>
+        <button id="addAchievementBtn" class="cta-button">Add Achievement</button>
+        <div id="achievementProgress" style="margin-top: 1rem;"></div>
+        <ul id="achievementList" class="accent-list" style="margin-top: 1rem;"></ul>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="card" id="filterSection" style="margin-top: 2rem;">
+        <h3>My Backlog</h3>
+        <div class="filter-controls">
+            <div class="form-group">
+                <label for="filterStatus">Filter by Status</label>
+                <select id="filterStatus">
+                    <option value="all">All</option>
+                    <option value="Planned">Planned</option>
+                    <option value="Playing">Playing</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="filterGenre">Filter by Genre</label>
+                <select id="filterGenre">
+                    <option value="all">All</option>
+                    <option value="Action">Action</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Simulation">Simulation</option>
+                    <option value="Platformer">Platformer</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Strategy">Strategy</option>
+                </select>
+            </div>
+        </div>
+        <div id="gameList" class="game-list"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> Gustavo Ribolla</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+</body>
+</html>

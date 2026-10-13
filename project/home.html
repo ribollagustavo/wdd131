@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the NextLevel Hub website, its purpose, and how it helps gamers organize their gaming experiences and life goals.">
+    <meta name="author" content="Gustavo Ribolla">
+    <title>WDD 131 | Project Home Page</title>
+
+    <link rel="stylesheet" href="styles/backlog.css">
+    <link rel="stylesheet" href="styles/backlog-large.css">
+    
+    <script defer src="scripts/backlog.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <a href="home.html" class="nav-logo" aria-label="NextLevel Hub Home">
+            <img 
+                src="images/projecticon-70.webp"
+                srcset="images/projecticon-70.webp 70w,
+                images/projecticon-150.webp 150w"
+                sizes="70px"
+                alt="NextLevel Hub Logo"
+                width="70"
+                height="70"
+                loading="lazy"
+                decoding="async">
+        </a>
+        <h1>NextLevel Hub</h1>
+        <nav aria-label="Main menu">
+            <button id="menu" aria-label="Menu"></button>
+        </nav>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="nextlevelhub.html">Tracker</a>
+        <a href="references.html">References</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Level Up Your Library</h2>
+        <p>Welcome to the <strong>NextLevel Hub</strong>. We help you transition from "too many games" to "just the right one." as well remember to keep your gaming experience organized and enjoyable in your life as a whole.</p>
+        <a href="nextlevelhub.html" class="cta-button">Start My Tracker</a>
+    </section>
+
+    <div class="grid-container">
+        <section class="card">
+            <h3>What is a Backlog?</h3>
+            <p>In the gaming world, a "backlog" is a collection of games you own but haven't finished—or sometimes haven't even started. Whether it's from a Steam sale or a subscription service, these games pile up, waiting for their turn in the spotlight.</p>
+        </section>
+
+        <section class="card">
+            <h3>Why is that important and related to your life goals?</h3>
+            <p>Managing your backlog reduces "decision paralysis." Instead of spending your limited free time staring at a list of 100 titles, a tracker helps you focus on what actually excites you right now, saving you time and mental energy. Also, with NextLevel Hub, you can align your gaming choices with your broader life objectives.</p>
+        </section>
+
+        <section class="card">
+            <h3>Deciding What's Next</h3>
+            <ul class="accent-list">
+                <li><strong>Follow the Mood:</strong> Don't play a 100-hour RPG if you're tired; pick an indie "palate cleanser" instead.</li>
+                <li><strong>Check the Time:</strong> Use sites like <em>HowLongToBeat</em> to match a game to your schedule.</li>
+                <li><strong>The Rule of Three:</strong> Keep only three games active: one big, one small, and one endless (like a sports or sim game).</li>
+            </ul>
+        </section>
+
+        <section class="card instruction">
+            <h3>How to Use This Site</h3>
+            <ol>
+                <li>Head over to the <strong>Tracker</strong> page.</li>
+                <li>Enter your game's details in the form.</li>
+                <li>Update the status as you progress (Planned, Playing, or Completed).</li>
+                <li>Your list is saved automatically for your next session!</li>
+            </ol>
+        </section>
+    </div>
+</main>
+<footer>
+    <p>&copy; <span id="currentyear"></span> Gustavo Ribolla</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+</body>
+</html>

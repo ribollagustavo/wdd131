@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page will list all external sources used throughout the site, including images, text, and any other borrowed content, properly cited to give credit to their original authors.">
+    <meta name="author" content="Gustavo Ribolla">
+    <title>WDD 131 | Project References</title>
+    <link rel="stylesheet" href="styles/backlog.css">
+    <link rel="stylesheet" href="styles/backlog-large.css">
+    <script defer src="scripts/backlog.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <a href="home.html" class="nav-logo" aria-label="NextLevel Hub Home">
+            <img 
+                src="images/projecticon-70.webp"
+                srcset="images/projecticon-70.webp 70w,
+                images/projecticon-150.webp 150w"
+                sizes="70px"
+                alt="Game Backlog Tracker Logo"
+                width="70"
+                height="70"
+                loading="lazy"
+                decoding="async">
+        </a>
+        <h1>NextLevel Hub</h1>
+        <nav aria-label="Main menu">
+            <button id="menu" aria-label="Menu"></button>
+        </nav>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="nextlevelhub.html">Tracker</a>
+        <a href="references.html">References</a>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <h2>Backlog References</h2>
+        <p>These are the sources and references used to build and support the content throughout the NextLevel Hub website, including images, text, and game data.</p>
+    </section>
+    <div class="grid-container">
+        <section class="card">
+            <h3>Game Data</h3>
+            <ul class="accent-list">
+                <li>Hollow Knight achievements — <a href="https://hollowknight.fandom.com/wiki/Achievements_(Hollow_Knight)" target="_blank">Wiki</a></li>
+                <li>Stardew Valley achievements — <a href="https://stardewvalleywiki.com/Achievements" target="_blank">Wiki</a></li>
+                <li>Halo 4 achievements — <a href="https://halo.fandom.com/wiki/List_of_Achievements_for_Halo_4" target="_blank">Wiki</a></li>
+                <li>Castle Crashers achievements — <a href="https://castlecrashers.fandom.com/wiki/Achievements" target="_blank">Wiki</a></li>
+                <li>Hades achievements — <a href="https://hades.fandom.com/wiki/Achievements" target="_blank">Wiki</a></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h3>Media</h3>
+            <ul class="accent-list">
+                <li>Site logo — <a href="https://copilot.microsoft.com" target="_blank">Microsoft Copilot</a></li>
+                <li>Fonts — <a href="https://fonts.google.com" target="_blank">Google Fonts</a> (Orbitron, Roboto)</li>
+            </ul>
+        </section>
+    </div>
+</main>
+<footer>
+    <p>&copy; <span id="currentyear"></span> Gustavo Ribolla</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+</body>
+</html>
